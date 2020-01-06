@@ -86,15 +86,21 @@ Bayes' Theorem is an important tool in understanding what we really know, given 
 
 Elvis Presley had a twin brother who died at birth.  What is the probability that Elvis was an identical twin? Assume we observe the following probabilities in the population: fraternal twin is 1/125 and identical twin is 1/300.  
 
->> ```python
->> # store probabilities of each twin scenario
->> p_fraternal = 1/125
->> p_identical = 1/300
->> # record probability of having a twin birth
->> p_twins = 19/1000
->> 
->> 
->> ```
+>> $$
+>> P(identical \cap brother) = P(identical) * P(brother | identical) = (1/300) * (1/2) = 0.0016666
+>> $$
+>>
+>> $$
+>> P(fraternal \cap brother) = P(fraternal) * P(brother | fraternal) = (1/125) * (1/4) = 0.002
+>> $$
+>>
+>> $$
+>> P(brother) = P(identical \cap brother) + P(fraternal \cap brother) = 0.0036666
+>> $$
+>>
+>> $$
+>> P(identical | brother) = P(identical \cap brother) / P(brother) = 0.0016666/0.0036666 = 0.454536
+>> $$
 >>
 >> 
 
